@@ -1,5 +1,6 @@
 {
   "name": "Blue Window",
+  "description": "XP-style blues, soft clouds and a waving robot, all drawn by shaders. The look follows the Blue Window preset of codex-themes; the art is new.",
   "seeds": {
     "light": {
       "bgTop": "#b7dcf7",
@@ -69,7 +70,7 @@
     }
   },
   "roles": {
-    "titleBar.background": "#e0effc",
+    "titleBar.background": "#2876c8",
     "sideBar.background": "#e4f2fc",
     "paneHeader.background": "#f0f7fe",
     "sideBar.tabActiveBackground": "#d6eafb",

@@ -11,14 +11,14 @@ The look follows the "Blue Window" preset of [codex-themes](https://github.com/f
 ## What it sets
 
 - Seeds: the light palette of the preset, used for both appearances.
-- Shaders: the window background (sky, clouds, sparkles, robot), and the faces of the title bar, the sidebar column, the chosen row and the pane header (glossy XP-style gradients).
-- Roles: the faces above, `pane.border` in the accent at 50%, and `button.background` in the accent.
+- Shaders: the window background (sky, clouds, sparkles, robot), a glossy XP-blue title bar with white text, a light sidebar column, a chosen row with a blue accent bar and an inner border, and a pane header with a blue bottom line.
+- Roles: the faces above (the title bar flat color is `#2876c8`), `pane.border` in the accent at 50%, and `button.background` in the accent.
 - Metrics: corner scale 0.2, 1 DIP borders, Tahoma then Segoe UI, shadows at half size.
 - Glass off. Terminal: Lumina Rayleigh Light. Wordmark: BLUE WINDOW.
 
 ## Install
 
-GoRex with theme shaders (docs/DSK-012-theme-shaders.md, phase 2) is needed. An older build loads the colors and drops the shaders, with warnings.
+GoRex with theme shaders (docs/DSK-012-theme-shaders.md, phase 2) and face text pairing is needed. An older build loads the colors and drops the shaders, with warnings.
 
 ```sh
 git clone https://github.com/si-mods/gorex-theme-blue-window

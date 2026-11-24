@@ -1,12 +1,17 @@
 package main
 
-// Blue Window pane header: white to light blue, with a line at the bottom.
+// Blue Window pane header: white to light blue, with a two-tone blue line
+// at the bottom.
 
 func Fragment(dst vec4, pos vec2) vec4 {
 	s := rectSize()
 	c := mix(vec3(1, 1, 1), vec3(0.88, 0.94, 0.99), pos.y/s.y)
-	if s.y-pos.y < 1 {
-		c = vec3(0.765, 0.875, 0.972)
+	b := s.y - pos.y
+	if b < 2 {
+		c = vec3(0.45, 0.73, 0.93)
+	}
+	if b < 1 {
+		c = vec3(0.157, 0.463, 0.784)
 	}
 	return vec4(c, 1)
 }
