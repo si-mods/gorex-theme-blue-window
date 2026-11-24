@@ -1,0 +1,9 @@
+package main
+
+// Blue Window sidebar column: a light horizontal gradient, as a task pane.
+
+func Fragment(dst vec4, pos vec2) vec4 {
+	x := pos.x / rectSize().x
+	c := mix(vec3(0.95, 0.975, 1.0), vec3(0.80, 0.895, 0.975), x*x)
+	return vec4(c, 1)
+}

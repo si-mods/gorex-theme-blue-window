@@ -1,0 +1,18 @@
+package main
+
+// Blue Window title bar: a glossy two-tone gradient with a white line on
+// top, in light blues that keep the dark text readable.
+
+func Fragment(dst vec4, pos vec2) vec4 {
+	h := rectSize().y
+	y := pos.y / h
+	c := mix(vec3(0.97, 0.985, 1.0), vec3(0.88, 0.94, 0.99), clamp(y/0.48, 0, 1))
+	lo := mix(vec3(0.82, 0.905, 0.98), vec3(0.765, 0.872, 0.968), clamp((y-0.48)/0.52, 0, 1))
+	if y > 0.48 {
+		c = lo
+	}
+	if pos.y < 1 {
+		c = vec3(1, 1, 1)
+	}
+	return vec4(c, 1)
+}

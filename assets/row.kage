@@ -1,0 +1,18 @@
+package main
+
+// Blue Window chosen row: a light blue gradient with a 1 px border and a
+// white line inside it.
+
+func Fragment(dst vec4, pos vec2) vec4 {
+	s := rectSize()
+	y := pos.y / s.y
+	c := mix(vec3(0.88, 0.945, 1.0), vec3(0.76, 0.87, 0.968), y)
+	e := min(min(pos.x, s.x-pos.x), min(pos.y, s.y-pos.y))
+	if e < 2 {
+		c = vec3(0.98, 0.99, 1.0)
+	}
+	if e < 1 {
+		c = vec3(0.765, 0.875, 0.972)
+	}
+	return vec4(c, 1)
+}

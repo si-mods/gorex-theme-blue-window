@@ -1,0 +1,131 @@
+{
+  "name": "Blue Window",
+  "seeds": {
+    "light": {
+      "bgTop": "#b7dcf7",
+      "bgMid": "#d4ebfc",
+      "bgLow": "#e4f2fd",
+      "bgBottom": "#eaf6ff",
+      "bgTint": "#73b9ed1f",
+      "text": "#173b61",
+      "textMuted": "#607e98",
+      "textFaint": "#7d97ad",
+      "iconMuted": "#6a87a1",
+      "emptyMark": "#7d97ad",
+      "busy": "#2f9e44",
+      "attention": "#e0a21c",
+      "done": "#4e9be0",
+      "exited": "#9aaabb",
+      "danger": "#d9363e",
+      "accent": "#2876c8",
+      "accentHover": "#3a86d6",
+      "accentPressed": "#1f63ab",
+      "accentText": "#ffffff",
+      "panel": "#ffffff",
+      "field": "#f6fbff",
+      "fieldBorder": "#93bae3",
+      "surface": "#ffffff",
+      "surfaceHover": "#e4f2fc",
+      "surfacePressed": "#cfe6f8",
+      "card": "#fffffff2",
+      "cardFocused": "#ffffff",
+      "shadow": "#1a4f8a1f",
+      "shadowFocused": "#1a4f8a33",
+      "backdrop": "#0b2a4a14",
+      "pillTint": "#2876c840"
+    },
+    "dark": {
+      "bgTop": "#b7dcf7",
+      "bgMid": "#d4ebfc",
+      "bgLow": "#e4f2fd",
+      "bgBottom": "#eaf6ff",
+      "bgTint": "#73b9ed1f",
+      "text": "#173b61",
+      "textMuted": "#607e98",
+      "textFaint": "#7d97ad",
+      "iconMuted": "#6a87a1",
+      "emptyMark": "#7d97ad",
+      "busy": "#2f9e44",
+      "attention": "#e0a21c",
+      "done": "#4e9be0",
+      "exited": "#9aaabb",
+      "danger": "#d9363e",
+      "accent": "#2876c8",
+      "accentHover": "#3a86d6",
+      "accentPressed": "#1f63ab",
+      "accentText": "#ffffff",
+      "panel": "#ffffff",
+      "field": "#f6fbff",
+      "fieldBorder": "#93bae3",
+      "surface": "#ffffff",
+      "surfaceHover": "#e4f2fc",
+      "surfacePressed": "#cfe6f8",
+      "card": "#fffffff2",
+      "cardFocused": "#ffffff",
+      "shadow": "#1a4f8a1f",
+      "shadowFocused": "#1a4f8a33",
+      "backdrop": "#0b2a4a14",
+      "pillTint": "#2876c840"
+    }
+  },
+  "roles": {
+    "titleBar.background": "#e0effc",
+    "sideBar.background": "#e4f2fc",
+    "paneHeader.background": "#f0f7fe",
+    "sideBar.tabActiveBackground": "#d6eafb",
+    "pane.border": "#2876c880",
+    "button.background": "#2876c8",
+    "sideBar.activeGroupTabBackground": "#d6eafb",
+    "sideBar.activeGroupBackground": "#2876c812"
+  },
+  "terminal": {
+    "light": "Lumina Rayleigh Light",
+    "dark": "Lumina Rayleigh Light"
+  },
+  "assets": {
+    "sky": "sky.kage",
+    "bar": "bar.kage",
+    "side": "side.kage",
+    "row": "row.kage",
+    "header": "header.kage"
+  },
+  "shaders": {
+    "api": 1,
+    "background": {
+      "source": "sky"
+    },
+    "faces": {
+      "titleBar.background": {
+        "source": "bar"
+      },
+      "sideBar.background": {
+        "source": "side"
+      },
+      "sideBar.tabActiveBackground": {
+        "source": "row"
+      },
+      "paneHeader.background": {
+        "source": "header"
+      },
+      "sideBar.activeGroupTabBackground": {
+        "source": "row"
+      }
+    }
+  },
+  "metrics": {
+    "radius": 0.2,
+    "border": 1,
+    "font": [
+      "Tahoma",
+      "Segoe UI",
+      "system"
+    ],
+    "shadow": {
+      "scale": 0.5
+    }
+  },
+  "glass": false,
+  "brand": {
+    "wordmark": "BLUE WINDOW"
+  }
+}
