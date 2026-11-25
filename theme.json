@@ -91,7 +91,7 @@
     "header": "header.kage"
   },
   "shaders": {
-    "api": 1,
+    "api": 2,
     "background": {
       "source": "sky"
     },

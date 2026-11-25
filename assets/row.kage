@@ -3,19 +3,39 @@ package main
 // Blue Window chosen row: a light blue gradient, a 1 px border with a white
 // line inside it, and a blue accent bar at the left edge.
 
+// The tone at the top.
+//gorex:param color #e0f1ff
+var Top vec3
+
+// The tone at the bottom.
+//gorex:param color #c2def7
+var Bottom vec3
+
+// The 1 px border.
+//gorex:param color #73b3ed
+var Border vec3
+
+// The accent bar, at its bottom.
+//gorex:param color seed:accent
+var Accent vec3
+
+// The accent bar, at its top.
+//gorex:param color #4d9ce0
+var AccentTop vec3
+
 func Fragment(dst vec4, pos vec2) vec4 {
 	s := rectSize()
 	y := pos.y / s.y
-	c := mix(vec3(0.88, 0.945, 1.0), vec3(0.76, 0.87, 0.968), y)
+	c := mix(Top, Bottom, y)
 	e := min(min(pos.x, s.x-pos.x), min(pos.y, s.y-pos.y))
 	if e < 2 {
 		c = vec3(0.98, 0.99, 1.0)
 	}
 	if e < 1 {
-		c = vec3(0.45, 0.70, 0.93)
+		c = Border
 	}
 	if pos.x < 3 {
-		c = mix(vec3(0.30, 0.61, 0.88), vec3(0.157, 0.463, 0.784), y)
+		c = mix(AccentTop, Accent, y)
 	}
 	return vec4(c, 1)
 }

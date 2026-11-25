@@ -2,14 +2,23 @@ package main
 
 // Blue Window title bar: a glossy XP-style blue, lighter in the upper half
 // and deeper in the lower, with a light line along the top. Every tone is
-// at least as deep as the flat color, so the white text keeps 4.5:1.
+// at least as deep as Top, so the white text keeps 4.5:1 when Top is the
+// accent.
+
+// The tone at the top, and the flat color of the title bar.
+//gorex:param color seed:accent
+var Top vec3
+
+// The deepest tone, at the bottom.
+//gorex:param color #144d99
+var Bottom vec3
 
 func Fragment(dst vec4, pos vec2) vec4 {
 	h := rectSize().y
 	y := pos.y / h
-	c := mix(vec3(0.157, 0.463, 0.784), vec3(0.13, 0.42, 0.75), clamp(y/0.45, 0, 1))
+	c := mix(Top, mix(Top, Bottom, 0.35), clamp(y/0.45, 0, 1))
 	if y > 0.45 {
-		c = mix(vec3(0.10, 0.36, 0.69), vec3(0.08, 0.30, 0.60), clamp((y-0.45)/0.55, 0, 1))
+		c = mix(mix(Top, Bottom, 0.7), Bottom, clamp((y-0.45)/0.55, 0, 1))
 	}
 	if pos.y < 1 {
 		c = vec3(0.55, 0.78, 0.96)

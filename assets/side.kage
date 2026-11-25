@@ -2,8 +2,16 @@ package main
 
 // Blue Window sidebar column: a light horizontal gradient, as a task pane.
 
+// The tone at the left edge.
+//gorex:param color #f2f9ff
+var Left vec3
+
+// The tone at the right edge.
+//gorex:param color #cce4f9
+var Right vec3
+
 func Fragment(dst vec4, pos vec2) vec4 {
 	x := pos.x / rectSize().x
-	c := mix(vec3(0.95, 0.975, 1.0), vec3(0.80, 0.895, 0.975), x*x)
+	c := mix(Left, Right, x*x)
 	return vec4(c, 1)
 }

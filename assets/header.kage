@@ -3,15 +3,31 @@ package main
 // Blue Window pane header: white to light blue, with a two-tone blue line
 // at the bottom.
 
+// The tone at the top.
+//gorex:param color #ffffff
+var Top vec3
+
+// The tone at the bottom.
+//gorex:param color #e0f0fc
+var Bottom vec3
+
+// The bottom line.
+//gorex:param color seed:accent
+var Line vec3
+
+// The light line above the bottom line.
+//gorex:param color #73baed
+var LineLight vec3
+
 func Fragment(dst vec4, pos vec2) vec4 {
 	s := rectSize()
-	c := mix(vec3(1, 1, 1), vec3(0.88, 0.94, 0.99), pos.y/s.y)
+	c := mix(Top, Bottom, pos.y/s.y)
 	b := s.y - pos.y
 	if b < 2 {
-		c = vec3(0.45, 0.73, 0.93)
+		c = LineLight
 	}
 	if b < 1 {
-		c = vec3(0.157, 0.463, 0.784)
+		c = Line
 	}
 	return vec4(c, 1)
 }
