@@ -4,8 +4,6 @@ A theme pack for [GoRex](https://github.com/si-mods/gorex): a 2007 desktop messe
 
 ![Blue Window](screenshots/canvas-light.png)
 
-![Blue Window](screenshots/tiled-light.png)
-
 The look follows the "Blue Window" preset of [codex-themes](https://github.com/freestylefly/codex-themes). The pack holds no image, code or text of that project: every picture in it is new art, drawn by the shaders in `assets/`. See [NOTICE](NOTICE).
 
 ## What it sets
@@ -14,16 +12,17 @@ The look follows the "Blue Window" preset of [codex-themes](https://github.com/f
 - Shaders: the window background (sky, clouds, sparkles, robot, and a soft light that follows the pointer over the sky), a glossy XP-blue title bar with white text, a light sidebar column, a chosen row with a blue accent bar and an inner border, and a pane header with a blue bottom line.
 - Roles: the faces above (the title bar flat color is `#2876c8`), `pane.border` in the accent at 50%, and `button.background` in the accent.
 - Metrics: corner scale 0.2, 1 DIP borders, Tahoma then Segoe UI, shadows at half size.
-- Glass off. Terminal: Lumina Rayleigh Light. Wordmark: BLUE WINDOW.
+- Glass off. Terminal: Lumina Rayleigh Light.
 
 ## Install
 
-This pack uses shader API version 2 (`"shaders": {"api": 2}`, docs/DSK-012-theme-shaders.md), so it needs a GoRex build with shader API 2: the next release after 0.61.0. An older build loads the colors and draws the faces and the background flat, with a warning.
+This pack uses shader API version 2 (`"shaders": {"api": 2}`, docs/DSK-012-theme-shaders.md), so it needs GoRex 0.62.0 or later. An older build loads the colors and draws the faces and the background flat, with a warning.
 
 ```sh
-git clone https://github.com/si-mods/gorex-theme-blue-window
 gorex pack install gorex-theme-blue-window
 ```
+
+This installs the pack from the [GoRex registry](https://github.com/si-mods/gorex-registry), so GoRex can update it later (`gorex pack update`).
 
 Then select **Blue Window** on the Extensions page of the settings, or set `"appearance.theme": "gorex-theme-blue-window"` in `settings.json`.
 

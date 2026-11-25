@@ -125,8 +125,5 @@
       "scale": 0.5
     }
   },
-  "glass": false,
-  "brand": {
-    "wordmark": "BLUE WINDOW"
-  }
+  "glass": false
 }
